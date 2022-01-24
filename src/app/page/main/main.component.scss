@@ -1,0 +1,30 @@
+.container {
+  margin: 2em 7.5%;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  .title {
+    font-size: 18pt;
+    font-weight: bold;
+    width: 100%;
+  }
+  p {
+    font-size: 16pt;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+  }
+  .prize {
+    color: yellow;
+  }
+  .player {
+    background-color: rgb(107 114 128);
+  }
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-span-2">
+    <p class="title">Prize</p>
+    <ng-container *ngIf="tournaments.length > 0">
+      <p class="prize" *ngFor="let value of tournaments[0]['prizeData']">
+        {{ value }}$
+      </p>
+    </ng-container>
+  </div>
+  <div class="col-span-2">
+    <p class="title">Score</p>
+    <p *ngFor="let item of playersByScore">
+      {{ item.score }}
+    </p>
+  </div>
+  <div class="col-span-6">
+    <p class="title">Players</p>
+    <p
+      *ngFor="let item of playersByScore"
+      class="player"
+      [ngStyle]="{ width: (item.players * 100) / max_players + '%' }"
+    >
+      {{ item.players }}
+    </p>
+  </div>
+</div>
